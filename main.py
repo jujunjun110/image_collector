@@ -9,7 +9,9 @@ def main():
     url = "https://source.unsplash.com/1024x1024/"
 
     for i in range(fetch_count):
-        urllib.request.urlretrieve(url, f"img/{prefix}_{i:04}.jpg")
+        filename = f"{prefix}_{i:04}.jpg"
+        print(filename)
+        urllib.request.urlretrieve(url, f"img/{filename}")
         time.sleep(3)
 
 
